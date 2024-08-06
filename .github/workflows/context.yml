@@ -15,9 +15,9 @@ jobs:
         run: |
           echo "Print Environment variable: $GITHUB_REPOSITORY_ID"
           echo "Print Environment variable: $GITHUB_OUTPUT"
-          echo "Prrint Day of week: $DAY_OF_WEEK"
+          echo "Print Day of week: $DAY_OF_WEEK"
         env:
-          DAY_OF_WEEK: Friday
+          DAY_OF_WEEK: Sunday
           
           
           
