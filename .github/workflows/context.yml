@@ -1,18 +1,23 @@
 name: Example Workflow Using Default Env Variables
 
 on: [push]
-
+env:
+  DAY_OF-WEEK: Monday
 jobs:
   example_job:
     runs-on: ubuntu-latest
+    env:
+      DAY_OF-WEEK: Friday
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Print GitHub Environment Variables
         run: |
           echo "Print Environment variable: $GITHUB_REPOSITORY_ID"
           echo "Print Environment variable: $GITHUB_OUTPUT"
+          echo "Prrint Day of week: $DAY_OF_WEEK"
+      - env:
+          DAY_OF_WEEK: Sunday
           
           
           
