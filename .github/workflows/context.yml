@@ -11,4 +11,4 @@ jobs:
 
       - name: Print GitHub Environment Variables
         run:
-          echo "Print Environment variable:$GITHUB_REPOSITORY_ID"
+          echo "Print Environment variable: $GITHUB_REPOSITORY_ID"
