@@ -2,12 +2,12 @@ name: Example Workflow Using Default Env Variables
 
 on: [push]
 env:
-  DAY_OF-WEEK: Monday
+  DAY_OF_WEEK: Monday
 jobs:
   example_job:
     runs-on: ubuntu-latest
     env:
-      DAY_OF-WEEK: Friday
+      DAY_OF_WEEK: Friday
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
