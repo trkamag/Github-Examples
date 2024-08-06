@@ -1,10 +1,10 @@
-name: "Workflows Commands"
-
-on: ['push']
-
-jobs: 
-  my-job:
+name: Example workflow using env context
+on: push
+jobs:
+  build:
     runs-on: ubuntu-latest
+    env:
+      MY_VAR: 'Hello World'
     steps:
-      - name: "Use Secret as Env Var"
-        run:  echo ${{ vars.ENV_CONTEXT_VAR }}
+      - name: Print environment variable
+        run: echo "The value of MY_VAR is $MY_VAR."
