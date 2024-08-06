@@ -1,17 +1,14 @@
-name: Example workflow using needs context
-on: push
+name: Example Workflow Using Default Env Variables
+
+on: [push]
+
 jobs:
-  job1:
-    runs-on: ubuntu-latest
-    outputs:
-      output1: "Data from job1"
-    steps:
-      - name: Set job output
-        run: echo "job1 completed"
-  job2:
-    needs: job1
+  example_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Use output from job1
-        run: echo "Received from job1: ${{ needs.job1.outputs.output1 }}"
-        
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print GitHub Environment Variables
+        run:
+          echo "Print Environment variable:$GITHUB_REPOSITORY"
