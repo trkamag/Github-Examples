@@ -18,6 +18,9 @@ jobs:
           echo "Print Day of week: $DAY_OF_WEEK"
         env:
           DAY_OF_WEEK: Sunday
+      - name: "Print list all env variables"
+        run: |
+          echo "Print DAY Of Week: ${{env.DAY_OF_WEEK}}"
           
           
           
