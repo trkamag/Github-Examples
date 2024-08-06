@@ -4,7 +4,7 @@ on: ['push']
 
 jobs: 
   my-job:
-    runs-on: ubuntu-lastst
+    runs-on: ubuntu-latest
     steps:
       - name: "group logging"
         run: |
